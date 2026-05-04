@@ -14,6 +14,8 @@ services:
         value: production
       - key: DISCORD_CLIENT_ID
         value: 1500879202646360124
+      - key: BOT_ENABLED
+        value: "true"
       - key: DISCORD_BOT_TOKEN
         sync: false
       - key: MAPLE_API_KEY

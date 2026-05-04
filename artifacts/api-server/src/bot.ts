@@ -351,5 +351,9 @@ export function startBot(): void {
     logger.warn("Skipping Discord bot — DISCORD_BOT_TOKEN not configured");
     return;
   }
+  if (process.env["BOT_ENABLED"] !== "true") {
+    logger.info("Skipping Discord bot — BOT_ENABLED is not set to true (set it on your host to enable)");
+    return;
+  }
   void client.login(token);
 }
